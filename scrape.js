@@ -7,7 +7,7 @@ const { chromium } = require('playwright');
   let grandTotal = 0;
 
   for (const seed of seeds) {
-    const url = `https://example.com/seed/${seed}`; // replace with real base URL
+    const url = `https://sanand0.github.io/tdsdata/js_table/?seed=${seed}`;
     await page.goto(url, { waitUntil: 'networkidle' });
     const numbers = await page.$$eval('table td', tds =>
       tds.map(td => td.textContent.trim()).filter(s => s !== '')
